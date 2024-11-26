@@ -8,19 +8,19 @@ using System.IO;
 namespace LearningLog
 {
     // properties
-    internal class LogEntry
+    internal abstract class LogEntry
     {
-        public int Id { get; set; }
-        public DateTime EntryDate { get; set; }
-        public int Wellness { get; set; }
-        public int Quality { get; set; }
-        public string Notes { get; set; }
-        public FileInfo RecordingFile { get; set; }
+        protected internal int Id { get; set; }
+        protected internal DateTime EntryDate { get; set; }
+        protected internal int Wellness { get; set; }
+        protected internal int Quality { get; set; }
+        protected internal string Notes { get; set; }
+        protected internal FileInfo RecordingFile { get; set; }
 
         // static properties
-        public static int Count { get; set; }
-        public static DateTime FirstEntry { get; set; }
-        public static DateTime NewestEntry { get; set; }
+        protected internal static int Count { get; set; }
+        protected internal static DateTime FirstEntry { get; set; }
+        protected internal static DateTime NewestEntry { get; set; }
 
         //default constructor
         public LogEntry()
